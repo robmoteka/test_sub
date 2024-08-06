@@ -1,0 +1,22 @@
+{% extends "scaffold.html.j2" %}
+{% block title %} 
+  {{ data['app'] }} - {{ data[''] }} -  {{ data['ver'] }} 
+{% endblock %}
+
+{# Przykładowe nadpisanie menu  #}
+{% block navbar %}
+{{ super() }}
+ <a class="nav-link" href="/admin">Panel admina</a>
+ 
+{% endblock %}
+
+{% block content %}
+<div class="text-bg-primary p-3">InformaNcja ciekawa</div>
+<div class="text-bg-secondary p-3">InformaNcja nieciekawa</div>
+<div class="text-bg-success p-3">InformaNcja niezmiernie zadowalająca</div>
+<div class="text-bg-danger p-3">Straszna informaNcja - skarga do loggera wysłana</div>
+<div class="text-bg-warning p-3">Oj bo zaraz informaNcja pójdzie do loggera</div>
+<div class="text-bg-light p-3">A to kompletnie mało znacząca informaNcja </div>
+<div class="text-bg-dark p-3">A to nie jest informaNcja to oznacza jest info o kompletnej klapie</div>
+
+{% endblock %}
